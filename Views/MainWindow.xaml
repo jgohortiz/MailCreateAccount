@@ -1,0 +1,42 @@
+﻿<Window x:Class="MailCreateAccount.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MailCreateAccount"
+        mc:Ignorable="d"
+        Title="FoxShell - MailCreateAccount" Height="600" Width="800" MinWidth="800" MinHeight="600" MaxWidth="800" MaxHeight="600" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ResizeMode="NoResize">
+    <Grid Margin="10,10,10,0" Height="566" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Archivos y Carpetas de salida" Margin="10,13,10,342" FontWeight="Bold" Grid.Row="1"/>
+        <GroupBox Header="Origen" Margin="10,0,10,500" Grid.RowSpan="2" FontWeight="Bold"/>
+        <Label x:Name="lblFileCsvSource" Content="Archivo CSV origen" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="44,28,0,0" Uid="lblFileCsvSource" Foreground="Black"/>
+        <TextBox x:Name="txtFileCsvSource" TextWrapping="Wrap" Margin="161,28,64,0" Uid="txtFileCsvSource" VerticalAlignment="Top" Height="26" IsReadOnly="True"/>
+        <Button x:Name="btnFileCsvSource" Content="..." Height="26" Width="33" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,28,22,0" Uid="btnFileCsvSource"/>
+        <Label x:Name="lblPathCsvOut" Content="Carpeta CSV resultados" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,35,0,0" Uid="lblPathCsvOut" Grid.Row="1"/>
+        <TextBox x:Name="txtPathCsvOut" TextWrapping="Wrap" Height="26" VerticalAlignment="Top" Margin="161,35,64,0" Uid="txtPathCsvOut" IsReadOnly="True" Grid.Row="1"/>
+        <Button x:Name="btnPathCsvOut" Content="..." Height="26" Width="33" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,35,22,0" Uid="btnPathCsvOut" Grid.Row="1"/>
+        <Label x:Name="lblPathLogOut" Content="Carpeta Log resultados" Height="26" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,66,0,0" Uid="lblPathLogOut" Grid.Row="1" Foreground="Black"/>
+        <TextBox x:Name="txtPathLogOut" TextWrapping="Wrap" Height="26" VerticalAlignment="Top" Margin="161,66,64,0" Uid="txtPathLogOut" Grid.Row="1" IsReadOnly="True"/>
+        <Button x:Name="btnPathLogOut" Content="..." Height="26" Width="33" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,66,22,0" Uid="btnPathLogOut" Grid.Row="1"/>
+        <Label x:Name="lblUUID" Content="UUID de Lote" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="74,125,0,0" Uid="lblUUID" Grid.Row="1"/>
+        <TextBox x:Name="txtUUID" TextWrapping="Wrap" Height="26" VerticalAlignment="Top" Margin="161,127,64,0" Uid="txtUUID" IsReadOnly="True" Grid.Row="1"/>
+        <Label x:Name="lblTipo" Content="Tipo de cuentas a crear" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,97,0,0" Uid="lblTipo" Grid.Row="1"/>
+        <ComboBox x:Name="cmbTipo" Margin="161,97,64,0" VerticalAlignment="Top" SelectedIndex="0" Uid="cmbTipo" Height="26" Grid.Row="1">
+            <ComboBoxItem x:Name="cmbiTtipoEstudiante" Content="Modelo 1" Tag="estudiante" ToolTip="Estudiante" Uid="cmbiTtipoEstudiante"/>
+            <ComboBoxItem x:Name="cmbiTipoMaestro" Content="Personalizado" Tag="maestro" ToolTip="Maestro" Uid="cmbiTipoMaestro"/>
+        </ComboBox>
+        <DataGrid x:Name="grdDatos" Margin="10,177,10,112" Grid.Row="1" IsReadOnly="True" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserSortColumns="False"/>
+        <StatusBar x:Name="stbPricipal" Margin="0,449,0,31" Height="26" Grid.Row="1" Background="White" BorderBrush="#FFA4A4A4">
+            <StatusBarItem x:Name="stbiPrincipalState" Content="" Height="24" VerticalAlignment="Center" Width="405" HorizontalAlignment="Left"/>
+            <Separator x:Name="spr1" Height="24" VerticalAlignment="Center" Width="3" Background="#FFD0D0D0"/>
+            <StatusBarItem x:Name="stbiSecondState" Content="" Height="24" VerticalAlignment="Center" Width="140"/>
+            <Separator x:Name="spr2" Height="24" VerticalAlignment="Center" Width="3" Background="#FFD0D0D0"/>
+            <ProgressBar x:Name="pgbProgressBar" Height="17" Width="210" HorizontalAlignment="Left"/>
+        </StatusBar>
+        <Button x:Name="btnProcess" Content="Procesar" Height="26" Width="210" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,409,10,0" Uid="btnProcess" Grid.Row="1"/>
+    </Grid>
+</Window>
