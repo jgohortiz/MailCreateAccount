@@ -13,9 +13,13 @@ Esta es una demostración sencilla de como se pueden crear cuentas de correo en 
 
 ## Instalación
  - Habilitar la ejecución de scripts
- 		Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
- 		Set-Executionpolicy unrestricted -scope CurrentUser
 
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+```powershell
+Set-Executionpolicy unrestricted -scope CurrentUser
+```
 ## Configuración
 Configuración en `Main.ps1`
 ```powershell
