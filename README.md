@@ -1,7 +1,7 @@
 # MailCreateAccount
 Este script tiene como objetivo crear las cuentas de correo en Microsoft 365 a partir de un archivo CSV
 
-# Realtime API Agents Demo
+# Comentarios
 
 Esta es una demostración sencilla de como se pueden crear cuentas de correo en Microsfot 365 mediante el uso de Powershell:
 - En este script se crea una GUI mediante la definición de una vista con xaml
