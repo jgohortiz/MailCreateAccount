@@ -17,7 +17,7 @@ Esta es una demostración sencilla de como se pueden crear cuentas de correo en 
  		Set-Executionpolicy unrestricted -scope CurrentUser
 
 ## Configuración
-Configuration in `src/app/agentConfigs/simpleExample.ts`
+Configuración en `Main.ps1`
 ```powershell
 $CONFIG_ACCOUNT = @{
 	Dominio = "@domain.com"
